@@ -62,6 +62,8 @@ void gotoxy(int x, int y) {
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
+// 待实现3.0版printmap: 使用gotoxy函数只修改改动部分优化
+
 // 新版printmap：使用缓冲区(buffer)优化
 void printmap() {
     char buffer[COL*ROW*2 + ROW + 1]; // 分配足够大的缓冲区（考虑空格+换行符+结尾\0）
@@ -276,4 +278,5 @@ int main() {
 
     return 0;
 }
+
 
